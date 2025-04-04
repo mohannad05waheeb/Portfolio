@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaFacebookF, FaWhatsapp, FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import mohannad from "../assets/mohannad.jpg";
-import cv from "../assets/Mohannad-Waheeb-FlowCV-Resume-20250404.pdf"
+import cv from "../assets/MohannadWaheeb_Frontend.pdf"
 const socialLinks = [
   { id: 1, icon: <FaFacebookF />, link: "https://www.facebook.com/mohannadismail.waheeb", color: "#1877F2" },  
   { id: 2, icon: <FaWhatsapp />, link: "https://wa.me/201023134652", color: "#25D366" },  
@@ -67,7 +67,7 @@ const Home = () => {
         <h2 className="text-xl font-medium mt-2 text-blue-400 h-8">{currentRole}</h2> 
         <motion.a
           href={cv}
-          download="MohannadWaheeb_CV.pdf"
+          download="MohannadWaheeb_Frontend.pdf"
           className="mt-6 px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md shadow-md transition-all duration-300"
           whileHover={{ scale: 1.1 }}
         >
