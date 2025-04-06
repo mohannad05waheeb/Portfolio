@@ -1,28 +1,24 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-
 const Contact = () => {
   const formRef = useRef();
   const [isSent, setIsSent] = useState(false);
-
   const handleSubmit = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
-        "service_o1ppwwa", // ✅ ضع هنا Service ID
-        "template_2epdt3m", // ✅ ضع هنا Template ID الصحيح
+        "service_o1ppwwa", 
+        "template_2epdt3m",  
         formRef.current,
-        "NEGBKCCG5m-jUXg9q" // ✅ ضع هنا Public Key
+        "NEGBKCCG5m-jUXg9q" 
       )
       .then(() => {
         setIsSent(true);
-        formRef.current.reset(); // مسح المدخلات بعد الإرسال
+        formRef.current.reset(); 
       })
       .catch((error) => console.error("Email Error:", error));
   };
-
   return (
     <section id="contact" className="min-h-screen bg-gray-900 text-white py-16 px-6">
       <div className="max-w-4xl mx-auto text-center">
@@ -84,5 +80,4 @@ const Contact = () => {
     </section>
   );
 };
-
 export default Contact;
